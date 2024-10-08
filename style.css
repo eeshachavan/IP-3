@@ -1,0 +1,261 @@
+/* Full-screen sections */
+section {
+    height: 100vh;
+    padding: 40px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar initial state (transparent) */
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar scroll state (black background with white text) */
+.navbar-scrolled {
+    background-color: #343a40 !important;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+    color: rgb(255, 255, 255) !important;
+}
+
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-brand {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: rgb(211, 211, 211) !important; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect - dark grey */
+.nav-link:hover {
+    color: #555 !important; /* Dark grey on hover */
+}
+
+/* Active effect - change to a different color when clicked */
+.nav-link:active {
+    color: #ff7f50 !important; /* Coral color on click */
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Full height profile section */
+#profile {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: flex-end; /* Align the white box to the bottom */
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Background image covering half of the screen */
+.profile-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Half the screen height */
+    background-image: url('https://cdn1.vectorstock.com/i/1000x1000/84/30/low-poly-style-graphic-background-vector-12098430.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* White box for the bottom half */
+.white-box {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%; /* Take 90% width of the screen */
+    min-height: 50vh; /* Ensure the box takes at least half the screen */
+    margin-top: -25px; /* Overlap the bottom of the image */
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.1), 
+                4px 0px 20px rgba(0, 0, 0, 0.1), 
+                -4px 0px 20px rgba(0, 0, 0, 0.1); /* Remove shadow from bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile picture */
+#profile img {
+    border-radius: 50%;
+    border: 5px solid rgb(183, 128, 128);
+    margin-top: -200px; /* Adjust this value as needed for proper overlap */
+}
+
+
+/* Social media icons */
+.social-icons a {
+    color: #000;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* About section styles */
+#about {
+    padding: 120px 0;
+    background-color: rgb(239, 248, 255);
+}
+
+#about h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text {
+    font-family:'Afacad Flux', sans-serif; /* Replace 'Poppins' with any other font if needed */
+    font-size: 1.1rem; /* Adjust size as desired */
+    line-height: 1.6; /* Improve readability */
+    font-weight: 400; /* Regular weight, change to 300 or 500 if you want it lighter or bolder */
+}
+
+/* About experience styles */
+
+#experience {
+    padding: 120px 0;
+    background-color: #effff5;
+}
+
+#experience h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Add margin between the heading and the card */
+#experience .card {
+    margin-top: 40px; /* Adjust this value as needed for desired gap */
+}
+
+.card {
+    border-radius: 15px; /* Adjust the value for more or less rounding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+#education {
+    padding: 120px 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 30px; /* Padding from top */
+    bottom: 30px; /* Padding from bottom */
+    height: 400px; /* Consistent height */
+    width: 40px; /* Reduced width for better look */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 20px 20px; /* Smaller icon size */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff; /* Ensures text visibility */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 400px; /* Ensures all images are of the same height */
+    object-fit: cover; /* Maintains aspect ratio and fills the space */
+}
+
+.carousel-item {
+    transition: opacity 1s ease-in-out; /* Smooth transition between slides */
+}
+
+.carousel-inner {
+    background-color: transparent; /* Removes background to avoid visible slide */
+}
+
+#skills {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.card-title i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Gradient effect */
+    border-radius: 10px;
+    transition: width 0.6s ease; /* Smooth progress bar transition */
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+
+
+
